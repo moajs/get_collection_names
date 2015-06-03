@@ -1,12 +1,9 @@
 var MongoClient = require('mongodb').MongoClient
   , format = require('util').format;
 
-module.exports = get_collection_names = function(connection, cb){
-  var host    = connection.host;
-  var port    = connection.port;
-  var dbname  = connection.name;
-
-  MongoClient.connect('mongodb://' + host + ':' + port + '/' + dbname, function(err, db) {
+module.exports = get_collection_names = function(host, port, db, cb){
+   
+  MongoClient.connect('mongodb://' + host + ':' + port + '/' + db, function(err, db) {
     if(err) throw err;
     db.collections(function(err , c){
       var names = [];
@@ -19,16 +16,18 @@ module.exports = get_collection_names = function(connection, cb){
           names.push(name);;
         }
       }
-      
-      cb(err, names);
+    
+      db.close();
+      return cb(err, names);
     });
-  
-    _name = function (name){
-      if(name.match(/^sys/g) ){
-        return;
-      }
-      
-      return name;
-    }
   });
+ 
+ 
+  function _name(name) {
+    if ( name.match(/^sys/g) ) {
+      return;
+    }
+  
+    return name;
+  } 
 }

@@ -12,7 +12,10 @@
     "url": "git+https://github.com/moajs/get_collection_names.git"
   },
   "devDependencies": {
-    "mongoose": "^4.0.4"
+    "concat-stream": "^1.4.8",
+    "mongoose": "^4.0.4",
+    "toml-require": "^1.0.1",
+    "toml": "^2.2.2"
   },
   "dependencies": {
     "mongodb": "^2.0.33"
