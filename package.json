@@ -1,0 +1,25 @@
+{
+  "name": "get_collection_names",
+  "version": "1.0.0",
+  "description": "mongodb get_collection_names with mongoose.connection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moajs/get_collection_names.git"
+  },
+  "devDependencies": {
+    "mongoose": "^4.0.4"
+  },
+  "dependencies": {
+    "mongodb": "^2.0.33"
+  },
+  "author": "alfred sang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moajs/get_collection_names/issues"
+  },
+  "homepage": "https://github.com/moajs/get_collection_names#readme"
+}
