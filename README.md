@@ -9,14 +9,16 @@ mongodb get_collection_names with mongoose.connection
 
 ## Usages
 
+```
 
-  var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-  require('./config/mongo');
+require('./config/mongo');
 
-  var get_collection_names = require('get_collection_names');
+var get_collection_names = require('get_collection_names');
 
-  get_collection_names(mongoose.connection, function(err, names){
-    console.log(names);
-  })
+get_collection_names(mongoose.connection, function(err, names){
+  console.log(names);
+})
 
+```
