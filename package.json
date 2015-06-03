@@ -4,7 +4,8 @@
   "description": "mongodb get_collection_names with mongoose.connection",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm publish .",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
