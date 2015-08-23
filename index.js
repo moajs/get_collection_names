@@ -12,7 +12,7 @@ module.exports = get_collection_names = function(host, port, db, cb){
         if(name == undefined | name == 'undefined'){
 
         }else{
-          console.log(name)
+          // console.log(name)
           names.push(name);;
         }
       }
